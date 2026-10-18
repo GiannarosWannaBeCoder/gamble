@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("OIP (1).webp");
+  background-size: cover;
+  background-position: center;
+  background-color: #000;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Outer layout wrapper */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Title */
+#title {
+  color: rgb(238, 238, 218);
+  text-align: center;
+  font-size: 50px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  letter-spacing: 2px;
+  text-shadow: 
+    0 0 10px #086d8c,
+    0 0 25px #00f3ff,
+    0 0 50px #00f3ff;
+}
+
+/* Main Orange Box Container */
+#slotmachine {
+  background-color: #0a0e0d;
+  border-radius: 16px;
+  border: 3px solid chartreuse;
+  width: 380px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  box-shadow: 
+    inset 0 10px 12px -5px rgba(0, 0, 0, 0.8),
+    inset 0 -10px 12px -5px rgba(0, 0, 0, 0.8),
+    0 0 20px rgba(248, 124, 0, 0.4);
+}
+
+/* Row wrapper for reels */
+#slots {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Individual Reel Box (Crops vertical overflow) */
+.reel {
+  width: 90px;
+  height: 130px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* was center */
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+/* Column holding symbols inside each reel */
+.reel-strip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  will-change: transform;
+}
+.reel-strip {
+  /* ...existing rules... */
+  transition: transform 0.6s ease-out;
+}
+
+/* Symbol formatting */
+.reel-strip h5 {
+  font-size: 40px;
+  height: 130px; /* Must match reel height */
+  flex: 0 0 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Spin Button */
+#gamblebutton {
+  background-color: rgb(173, 0, 242);
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: bold;
+  font-family: inherit;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 50px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 
+    0 0 10px #8c0864,
+    0 0 25px #6200ff,
+    0 0 50px #8400ff;
+  text-shadow: 0 0 10px #fff;
+}
+
+#gamblebutton:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+
+#gamblebutton:active {
+  transform: scale(0.95);
+}
